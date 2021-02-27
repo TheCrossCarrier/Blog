@@ -1,0 +1,14 @@
+@media screen and (max-width: 660px) {
+  .header__nav {
+    display: none;
+  }
+  .header__nav-burger-btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  :root {
+    --rem: 10.5Px;
+  }
+}
