@@ -78,3 +78,8 @@ export default series(
   parallel(css, js, img, fonts, html),
   serve
 )
+
+export const build = series(
+  clean,
+  parallel(css, js, img, fonts, html)
+)
