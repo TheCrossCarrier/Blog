@@ -1,0 +1,1 @@
+"use strict";var btn=document.querySelector(".header__nav-burger-btn"),nav=document.querySelector(".header__nav");btn.onclick=function(){nav.classList.toggle("header__nav_burger_active"),btn.classList.toggle("header__nav-burger-btn_active"),document.body.classList.toggle("no-overflow")};
