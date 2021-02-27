@@ -300,20 +300,20 @@ a, button, input {
   grid-area: c;
   margin-top: 30px;
   margin-bottom: 20px;
-  font: 24px 'Futura PT Medium';
+  font: 24px 'Futura PT Medium', sans-serif;
   color: var(--black);
 }
 
 .card__text {
   grid-area: d;
-  font: 18px 'Futura PT Book';
+  font: 18px 'Futura PT Book', sans-serif;
   color: var(--gray);
 }
 
 .card__date {
   grid-area: b;
   justify-self: end;
-  font: 16px 'Futura PT Book';
+  font: 16px 'Futura PT Book', sans-serif;
   color: var(--gray);
 }
 
@@ -459,7 +459,7 @@ a, button, input {
   width: fit-content;
   display: block;
   border-radius: 8px;
-  font: 16px 'Futura PT Book';
+  font: 16px 'Futura PT Book', sans-serif;
   transition: background .5s;
 }
 
@@ -516,7 +516,7 @@ a, button, input {
 
 .popular__title {
   margin-bottom: 20px;
-  font: 24px 'Futura PT Medium';
+  font: 24px 'Futura PT Medium', sans-serif;
   color: var(--black);
 }
 
@@ -539,12 +539,12 @@ a, button, input {
 
 .article__title {
   margin-bottom: 10px;
-  font: 18px 'Futura PT Book';
+  font: 18px 'Futura PT Book', sans-serif;
   color: var(--black);
 }
 
 .article__date {
-  font: 18px 'Futura PT Book';
+  font: 18px 'Futura PT Book', sans-serif;
   color: var(--gray);
 }
 
@@ -581,7 +581,7 @@ a, button, input {
 }
 
 .pagination__link {
-  font: 18px 'Futura PT Book';
+  font: 18px 'Futura PT Book', sans-serif;
   color: var(--black);
   transition: .5s;
 }
@@ -597,7 +597,7 @@ a, button, input {
 
 .pagination__next-page-link {
   margin-left: 20px;
-  font: 18px 'Futura PT Book';
+  font: 18px 'Futura PT Book', sans-serif;
 }
 
 .pagination__next-page-link > img {
@@ -615,7 +615,7 @@ a, button, input {
 
 .mailing__title {
   margin-bottom: 30px;
-  font: 24px 'Futura PT Medium';
+  font: 24px 'Futura PT Medium', sans-serif;
   color: var(--black);
 }
 
@@ -626,7 +626,7 @@ a, button, input {
   background-color: #f9f9f9;
   border: none;
   border-radius: 20px;
-  font: 18px 'Futura PT Book';
+  font: 18px 'Futura PT Book', sans-serif;
   color: var(--black);
 }
 
@@ -655,7 +655,7 @@ a, button, input {
 }
 
 .mailing__submit-btn > span {
-  font: 18px 'Futura PT Book';
+  font: 18px 'Futura PT Book', sans-serif;
   color: var(--white);
 }
 
@@ -685,6 +685,6 @@ a, button, input {
 
 .copyright {
   margin-top: 64px;
-  font: 14px 'Futura PT Book';
+  font: 14px 'Futura PT Book', sans-serif;
   color: var(--black);
 }
