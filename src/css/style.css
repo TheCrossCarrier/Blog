@@ -4,6 +4,7 @@
   --black: #2f2222;
   --gray: rgba(47, 34, 34, .4);
   --blue: #5d71dd;
+  --light-blue: rgba(93, 113, 221, .05);
 }
 
 html {
@@ -100,12 +101,12 @@ a, button, input {
   margin-right: 40px;
 }
 
-.nav__item_current {
+.current-page-text {
   position: relative;
-  color: var(--blue);
+  color: var(--blue) !important;
 }
 
-.nav__item_current::after {
+.current-page-text::after {
   content: '';
   position: absolute;
   left: 0;
@@ -257,7 +258,10 @@ a, button, input {
 /* News cards */
 
 .cards {
-  width: 1040px;
+}
+
+.cards__inner {
+  max-width: 1040px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: min-content;
@@ -270,6 +274,8 @@ a, button, input {
 
 .card__link {
   padding: 40px 40px 52px;
+  height: 100%;
+  width: 100%;
   display: grid;
   grid-template-areas:
     'a b'
@@ -321,8 +327,8 @@ a, button, input {
 }
 
 .card_size_large .card__link {
-  height: 280px;
-  width: 1040px;
+  /* height: 280px; */
+  /* width: 1040px; */
 }
 
 /* Medium card */
@@ -333,8 +339,8 @@ a, button, input {
 }
 
 .card_size_medium .card__link {
-  height: 400px;
-  width: 680px;
+  /* height: 400px;
+  width: 680px; */
   grid-template-areas:
     'a b'
     'c c'
@@ -349,8 +355,8 @@ a, button, input {
 
 .card_size_medium-thin .card__link {
   padding: 30px 40px;
-  height: 180px;
-  width: 680px;
+  /* height: 180px;
+  width: 680px; */
   grid-template-areas:
     'a b'
     'c c'
@@ -372,8 +378,8 @@ a, button, input {
 }
 
 .card_size_small .card__link {
-  height: 400px;
-  width: 320px;
+  /* height: 400px;
+  width: 320px; */
   padding: 40px 30px;
   grid-template-areas:
     'a'
@@ -461,7 +467,7 @@ a, button, input {
 /* Light-blue button */
 
 .btn_light-blue {
-  background-color: rgba(93, 113, 221, 0.05);
+  background-color: var(--light-blue);
   color: var(--blue);
 }
 
@@ -548,21 +554,93 @@ a, button, input {
   background-color: var(--gray);
 }
 
+/* Pagination */
+
+.cards__pagination {
+  padding: 80px 0 100px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination__pages {
+}
+
+.pagination__pages > * {
+  display: inline;
+}
+
+.pagination__page {
+}
+
+.pagination__page:not(:last-child) {
+  margin-right: 21px;
+}
+
+.pagination__link {
+  font: 18px 'Futura PT Book';
+  color: var(--black);
+  transition: .5s;
+}
+
+.pagination__link:hover {
+  color: var(--blue);
+}
+
+.pagination__ommited {
+  color: var(--black);
+  cursor: default;
+}
+
+.pagination__next-page-link {
+  margin-left: 20px;
+  font: 18px 'Futura PT Book';
+}
+
+.pagination__next-page-link > img {
+  margin-left: 8px;
+}
+
 /* Mailing */
 
 .mailing {
   margin-top: 40px;
-  border-radius: 20px;
-}
-.mailing__title {
-  font: 24px 'Futura PT Medium';
-  color: var(--black);
-}
-.mailing__input {
+  padding: 40px 30px 50px;
+  background-color: var(--white);
   border-radius: 20px;
 }
 
+.mailing__title {
+  margin-bottom: 30px;
+  font: 24px 'Futura PT Medium';
+  color: var(--black);
+}
+
+.mailing__input {
+  padding: 13px 30px;
+  height: 50px;
+  width: 260px;
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 20px;
+  font: 18px 'Futura PT Book';
+  color: var(--black);
+}
+
+.mailing__input::placeholder {
+  color: rgba(47, 34, 34, .6);
+}
+
+.mailing__input:focus {
+  box-shadow: 0 0 0 1.5px var(--blue);
+  outline: none;
+}
+
 .mailing__submit-btn {
+  margin-top: 21px;
   height: 50px;
   width: 260px;
   display: flex;
@@ -570,6 +648,10 @@ a, button, input {
   align-items: center;
   background-color: var(--blue);
   border-radius: 20px;
+}
+.mailing__submit-btn:focus {
+  box-shadow: 0 0 0 1.5px var(--black);
+  outline: none;
 }
 
 .mailing__submit-btn > span {
@@ -581,4 +663,28 @@ a, button, input {
   height: 18.6px;
   width: 20px;
   margin-left: 10px;
+}
+
+/* Footer */
+
+.footer {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--light-blue);
+}
+
+.footer__logo {
+  margin-bottom: 40px;
+}
+
+.footer__nav .nav__item:not(:last-child) {
+  margin-right: 80px;
+}
+
+.copyright {
+  margin-top: 64px;
+  font: 14px 'Futura PT Book';
+  color: var(--black);
 }
